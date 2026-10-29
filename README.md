@@ -73,7 +73,7 @@ _headers            security headers for Cloudflare Pages / Netlify
 
 ## Live site and deployment
 
-The game is live at <https://python-quest.mukeemuddeen9694.workers.dev/>.
+The game is live at <https://python-quest.mukeemkhan.workers.dev/>.
 
 It is hosted on Cloudflare (static assets) and connected to this GitHub repository, so every push to the `main` branch is deployed automatically. There is no build step: the repository root is the site.
 
@@ -81,7 +81,7 @@ To host it somewhere else, connect the repository to any static host with the bu
 
 **Keep in mind**
 
-- `og:image` in `index.html` is an absolute URL (`https://python-quest.mukeemuddeen9694.workers.dev/og-image.png`). If the game moves to another address, update that URL.
+- `og:image` in `index.html` is an absolute URL (`https://python-quest.mukeemkhan.workers.dev/og-image.png`). If the game moves to another address, update that URL.
 - The `_headers` file uses a strict Content-Security-Policy (no inline scripts or styles). The game is written for it, so keep it that way when you add code: no `onclick="..."`, no `style="..."`, no inline `<script>`.
 
 ## Privacy
