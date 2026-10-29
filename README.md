@@ -71,21 +71,17 @@ og-image.png        social sharing image (1200 x 630)
 _headers            security headers for Cloudflare Pages / Netlify
 ```
 
-## Publish it
+## Live site and deployment
 
-**As its own GitHub repo**
+The game is live at <https://python-quest.mukeemuddeen9694.workers.dev/>.
 
-1. Copy or move this `python-quest` folder somewhere outside the main website repo.
-2. `git init`, commit, create an empty repo on GitHub, then push.
-3. Connect the repo to Cloudflare Pages (build command: none, output directory: `/`). The game is then live at its own address.
+It is hosted on Cloudflare (static assets) and connected to this GitHub repository, so every push to the `main` branch is deployed automatically. There is no build step: the repository root is the site.
 
-**Inside the main website**
+To host it somewhere else, connect the repository to any static host with the build command left empty and the root folder as the output directory. The `_headers` file works on Cloudflare and Netlify.
 
-The folder already sits at `games_on_my_web/python-quest/`, so deploying the site publishes the game at `/games_on_my_web/python-quest/`. Link to it from the main page, and add that URL to `sitemap.xml`.
+**Keep in mind**
 
-**Before you publish, check two things**
-
-- `og:image` in `index.html` points to `https://mukeemkhan.pages.dev/games_on_my_web/python-quest/og-image.png`. If the game lives at a different address, update that URL.
+- `og:image` in `index.html` is an absolute URL (`https://python-quest.mukeemuddeen9694.workers.dev/og-image.png`). If the game moves to another address, update that URL.
 - The `_headers` file uses a strict Content-Security-Policy (no inline scripts or styles). The game is written for it, so keep it that way when you add code: no `onclick="..."`, no `style="..."`, no inline `<script>`.
 
 ## Privacy
